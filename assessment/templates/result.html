@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>My Test History</h1>
+
+{% for r in results %}
+    <p>
+        <b>{{ r.test.title }}</b> |
+        Score: {{ r.score }} |
+        Date: {{ r.submitted_at }}
+    </p>
+{% empty %}
+    <p>No results yet.</p>
+{% endfor %}
+
+{% endblock %}

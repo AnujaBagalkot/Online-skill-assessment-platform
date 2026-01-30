@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Results</title>
+</head>
+<body>
+    <h1>My Test History</h1>
+
+    {% for r in results %}
+        <p>
+            Test: {{ r.test.title }} |
+            Score: {{ r.score }} |
+            Date: {{ r.submitted_at }}
+        </p>
+    {% empty %}
+        <p>No results yet.</p>
+    {% endfor %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

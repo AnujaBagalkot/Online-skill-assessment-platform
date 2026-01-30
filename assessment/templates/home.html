@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Available Tests</h1>
+
+{% for test in tests %}
+    <p>
+        <a href="/test/{{ test.id }}/">{{ test.title }}</a>
+    </p>
+{% empty %}
+    <p>No tests available right now.</p>
+{% endfor %}
+
+{% endblock %}
